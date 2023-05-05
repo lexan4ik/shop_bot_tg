@@ -150,7 +150,7 @@ class BotDB:
 
     #Поиск определенного заказа для выдачи карточки
     def search_order_id_order(self,id_order):
-        result = self.cursor.execute("""SELECT user_order.id,products.prod_id,name_product,price_product,photo,user_order.count,user_order.status,user_order.delivery,user_order.id_order FROM products
+        result = self.cursor.execute("""SELECT user_order.id,products.prod_id,name_product,price_product,photo,user_order.count,user_order.status,user_order.delivery,user_order.id_order,user_order.tg_id FROM products
                 INNER JOIN user_order
                 ON products.prod_id = user_order.prod_id
                 WHERE id_order like ? """, (id_order,))
