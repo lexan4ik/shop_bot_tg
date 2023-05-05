@@ -246,7 +246,7 @@ def answer(call):
 
     #Возврат в меню 
     if flag == 'menu':
-        bot.send_message(user_id,'Добро пожаловать в наш магазин!', reply_markup=menu)
+        bot.send_message(id,'Добро пожаловать в наш магазин!', reply_markup=menu)
 
     #Показать всех Администраторов
     if flag == 'showadmn':
