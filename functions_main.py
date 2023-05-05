@@ -199,14 +199,14 @@ def key_gen_category(list_, num, fix_poz=7, flag="x", flag2="f"):
     for x in range(num * fix_poz, end_):
         il.add(InlineKeyboardButton(list_[x], callback_data=flag2 + str(list_[x])))
     if num == 0 and len(list_) < fix_poz:
-        il.add(InlineKeyboardButton("В меню", callback_data="m"))
+        il.add(InlineKeyboardButton("В меню", callback_data="menu"))
     elif num == 0:
-        il.add(InlineKeyboardButton("В меню", callback_data="m"),InlineKeyboardButton("Дальше", callback_data=flag + str(num + 1)))
+        il.add(InlineKeyboardButton("В меню", callback_data="menu"),InlineKeyboardButton("Дальше", callback_data=flag + str(num + 1)))
     elif num != 0 and end_ == len(list_):
-        il.add(InlineKeyboardButton("Назад", callback_data=flag + str(num - 1)),InlineKeyboardButton("В меню", callback_data="m"))
+        il.add(InlineKeyboardButton("Назад", callback_data=flag + str(num - 1)),InlineKeyboardButton("В меню", callback_data="menu"))
     else:
         il.add(InlineKeyboardButton("Назад", callback_data=flag + str(num - 1)),
-               InlineKeyboardButton("В меню", callback_data="m"),
+               InlineKeyboardButton("В меню", callback_data="menu"),
                InlineKeyboardButton("Дальше", callback_data=flag + str(num + 1)))
     return il
 
