@@ -244,6 +244,10 @@ def answer(call):
         except:
             bot.send_message(admin_chat_id, f'Запрос прав на продажу от пользователя {call.message.chat.id}', reply_markup=get_seller_keyb)
 
+    #Возврат в меню 
+    if flag == 'menu':
+        bot.send_message(user_id,'Добро пожаловать в наш магазин!', reply_markup=menu)
+
     #Показать всех Администраторов
     if flag == 'showadmn':
         bot.send_message(id, 'Все администраторы:', reply_markup=admin_list())
