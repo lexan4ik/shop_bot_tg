@@ -1,6 +1,8 @@
 {
 	"TOKEN": "you_token",
-	"ADMINCHAT" : "you_adminchat",
-	"SUPERADMIN" : "{'tg_id':'you_id','name':'user_name','right':'Супер администратор'}",
-	"CATEGORY" : "{['Продукты','Одежда','Другое']}" 
+	"ADMINCHAT" : "you_id_admin_chat",
+	"ADMIN_TG_ID" : "you_tg_id",
+	"ADMIN_NAME" : "you_tg_username",
+	"ADMIN_RIGHT" : "Супер администратор",
+	"CATEGORY" : ["Продукты", "Одежда" ,"Другое"]
 }
